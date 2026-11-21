@@ -1,0 +1,19 @@
+{
+  "name": "stello-hub-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website, request form and Google Sheets/Calendar backend for an ICT hub",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node dev.js",
+    "test": "node --test",
+    "test:e2e": "node tests/e2e.js",
+    "check:launch": "node tests/launch-check.js"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.1"
+  }
+}
