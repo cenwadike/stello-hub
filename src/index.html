@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Co-working, ICT training and software in {{CITY}} | {{NAME}}</title>
+  <meta name="description"
+    content="Rent a desk, train for an ICT career or hire a software team. {{NAME}} is a co-working space, ICT training centre and software studio in {{CITY}}.">
+  <link rel="canonical" href="{{DOMAIN}}/">
+  <meta name="theme-color" content="#FFC21A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Co-working, ICT training and software in {{CITY}} | {{NAME}}">
+  <meta property="og:description"
+    content="Rent a desk, train for an ICT career or hire a software team. {{NAME}} is a co-working space, ICT training centre and software studio in {{CITY}}.">
+  <meta property="og:url" content="{{DOMAIN}}/">
+  <meta property="og:image" content="{{DOMAIN}}/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='%23FFC21A' stroke='%2310202C' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Sans:wght@400;500;600&display=swap">
+  {{JSONLD}}
+  <style>
+    :root {
+      --bg: #EDF1F4;
+      --ink: #10202C;
+      --ink2: #41525F;
+      --teal: #0E7A6B;
+      --tealbg: #D7EBE7;
+      --yel: #FFC21A;
+      --line: #C5D0D8;
+      --white: #fff;
+      --err: #B3261E
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.55
+    }
+
+    h1,
+    h2,
+    h3,
+    .logo {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: 400;
+      letter-spacing: -.01em;
+      line-height: 1.08
+    }
+
+    .wrap {
+      padding: 0 96px
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 96px
+    }
+
+    .logo {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .logo i {
+      width: 26px;
+      height: 26px;
+      background: var(--yel);
+      display: inline-block;
+      border: 3px solid var(--ink)
+    }
+
+    nav ul {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      font-size: 17px;
+      font-weight: 500
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 26px;
+      font-weight: 600;
+      font-size: 17px;
+      border-radius: 4px;
+      background: var(--ink);
+      color: #fff
+    }
+
+    .btn.y {
+      background: var(--yel);
+      color: var(--ink)
+    }
+
+    .btn.o {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      padding: 13px 24px
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 600px 1fr;
+      gap: 64px;
+      padding: 48px 96px 96px;
+      align-items: center
+    }
+
+    .hero h1 {
+      font-size: 62px;
+      margin-bottom: 26px
+    }
+
+    .hero p {
+      font-size: 21px;
+      color: var(--ink2);
+      max-width: 540px;
+      margin-bottom: 34px
+    }
+
+    .hero .ctas {
+      display: flex;
+      gap: 14px
+    }
+
+    .hero small {
+      display: block;
+      margin-top: 22px;
+      color: var(--ink2);
+      font-size: 15px
+    }
+
+    /* floor plan */
+    .plan {
+      background: var(--white);
+      border: 3px solid var(--ink);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      grid-template-rows: 230px 190px 120px;
+      gap: 12px;
+      position: relative
+    }
+
+    .z {
+      border: 2px solid var(--ink);
+      padding: 16px 18px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end
+    }
+
+    .z b {
+      font-family: 'Archivo Black';
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.1
+    }
+
+    .z span {
+      font-size: 15px;
+      color: var(--ink2)
+    }
+
+    .z.a {
+      background: var(--yel);
+      grid-row: 1/3
+    }
+
+    .z.b {
+      background: var(--tealbg)
+    }
+
+    .z.c {
+      background: var(--white);
+      background-image: repeating-linear-gradient(45deg, transparent 0 9px, #E4EAEE 9px 10px)
+    }
+
+    .z.d {
+      background: var(--ink);
+      color: #fff;
+      grid-column: 1/3
+    }
+
+    .z.d span {
+      color: #B9C7D1
+    }
+
+    .desks {
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      right: 18px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px
+    }
+
+    .desks i {
+      height: 34px;
+      background: rgba(16, 32, 44, .12);
+      border: 2px solid var(--ink)
+    }
+
+    .door {
+      position: absolute;
+      bottom: -3px;
+      left: 44%;
+      width: 70px;
+      height: 6px;
+      background: var(--bg)
+    }
+
+    .plan-cap {
+      position: absolute;
+      right: -3px;
+      top: -34px;
+      font-size: 14px;
+      color: var(--ink2)
+    }
+
+    section {
+      padding: 96px
+    }
+
+    h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+      max-width: 760px
+    }
+
+    .lead {
+      font-size: 20px;
+      color: var(--ink2);
+      max-width: 680px;
+      margin-bottom: 56px
+    }
+
+    .alt {
+      background: var(--white)
+    }
+
+    /* services rows */
+    .row {
+      display: grid;
+      grid-template-columns: 70px 330px 1fr 230px;
+      gap: 36px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+      align-items: start
+    }
+
+    .row:last-child {
+      border-bottom: 2px solid var(--ink)
+    }
+
+    .row h3 {
+      font-size: 28px
+    }
+
+    .row .tag {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--yel);
+      border: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Archivo Black';
+      font-size: 19px
+    }
+
+    .row p {
+      color: var(--ink2);
+      margin-bottom: 10px
+    }
+
+    .row ul {
+      list-style: none;
+      font-size: 16px
+    }
+
+    .row li:before {
+      content: "+ ";
+      font-weight: 700;
+      color: var(--teal)
+    }
+
+    .row a {
+      font-weight: 600;
+      border-bottom: 3px solid var(--yel);
+      padding-bottom: 2px;
+      display: inline-block
+    }
+
+    /* courses */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px
+    }
+
+    th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--ink2);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--ink)
+    }
+
+    td {
+      padding: 20px 16px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    td:first-child {
+      font-weight: 600
+    }
+
+    .pill {
+      background: var(--tealbg);
+      color: var(--teal);
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 15px;
+      font-weight: 600
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px
+    }
+
+    .prod {
+      padding: 24px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .prod h3 {
+      font-size: 22px;
+      margin-bottom: 6px
+    }
+
+    .prod p {
+      color: var(--ink2);
+      font-size: 17px
+    }
+
+    .status {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal)
+    }
+
+    .status.s {
+      color: #8A6500
+    }
+
+    .check {
+      list-style: none;
+      margin: 6px 0 34px
+    }
+
+    .check li {
+      padding: 11px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .check li:before {
+      content: "✓  ";
+      color: var(--teal);
+      font-weight: 700
+    }
+
+    .quote {
+      background: var(--ink);
+      color: #fff;
+      padding: 44px;
+      border-radius: 4px
+    }
+
+    .quote h3 {
+      font-size: 28px;
+      margin-bottom: 12px
+    }
+
+    .quote p {
+      color: #B9C7D1;
+      margin-bottom: 26px
+    }
+
+    .field {
+      background: #1B3141;
+      border: 1px solid #38505F;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      color: #8FA3B0;
+      font-size: 16px;
+      border-radius: 3px
+    }
+
+    /* faq */
+    .faq {
+      max-width: 900px
+    }
+
+    .q {
+      padding: 24px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .q h3 {
+      font-family: 'Fira Sans';
+      font-weight: 600;
+      font-size: 21px;
+      letter-spacing: 0;
+      margin-bottom: 8px
+    }
+
+    .q p {
+      color: var(--ink2)
+    }
+
+    .cta-band {
+      background: var(--yel);
+      padding: 72px 96px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .cta-band h2 {
+      margin: 0;
+      font-size: 40px;
+      max-width: 700px
+    }
+
+    footer {
+      background: var(--ink);
+      color: #B9C7D1;
+      padding: 64px 96px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      font-size: 16px
+    }
+
+    footer .logo {
+      color: #fff;
+      margin-bottom: 14px
+    }
+
+    footer h3 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 600;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 12px
+    }
+
+    footer p {
+      margin-bottom: 6px
+    }
+
+    .reqcard {
+      max-width: 620px;
+      margin: 0 auto;
+      background: #fff;
+      border: 3px solid var(--ink);
+      padding: 36px
+    }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 26px
+    }
+
+    .tabs button {
+      padding: 12px 6px;
+      border: 2px solid var(--ink);
+      background: #fff;
+      font: 600 15px 'Fira Sans', sans-serif;
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 4px
+    }
+
+    .tabs button[aria-pressed="true"] {
+      background: var(--yel)
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 16px 0 6px
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 2px solid var(--line);
+      border-radius: 4px;
+      font: inherit;
+      background: #fff;
+      color: var(--ink)
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    .tabs button:focus-visible,
+    .go:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 1px;
+      border-color: var(--ink)
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical
+    }
+
+    .row2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px
+    }
+
+    .hint {
+      font-size: 14px;
+      color: var(--ink2);
+      margin-top: 4px
+    }
+
+    fieldset {
+      border: 0;
+      display: none
+    }
+
+    fieldset.on {
+      display: block
+    }
+
+    .hp {
+      position: absolute;
+      left: -9999px;
+      height: 0;
+      overflow: hidden
+    }
+
+    .go {
+      margin-top: 26px;
+      width: 100%;
+      padding: 16px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--ink);
+      color: #fff;
+      font: 600 18px 'Fira Sans', sans-serif;
+      cursor: pointer
+    }
+
+    .go:disabled {
+      opacity: .6;
+      cursor: wait
+    }
+
+    .msg {
+      margin-top: 16px;
+      font-weight: 600
+    }
+
+    .msg.err {
+      color: var(--err)
+    }
+
+    .done {
+      display: none;
+      text-align: left
+    }
+
+    .done h2 {
+      font: 400 28px/1.1 'Archivo Black', sans-serif;
+      margin-bottom: 10px
+    }
+
+    .done a {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 22px;
+      background: var(--yel);
+      color: var(--ink);
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none
+    }
+
+    .fine {
+      font-size: 14px;
+      color: var(--ink2);
+      margin-top: 18px
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    @media (prefers-reduced-motion:no-preference) {
+      html {
+        scroll-behavior: smooth
+      }
+    }
+
+    .tw {
+      overflow-x: auto
+    }
+
+    .tw table {
+      min-width: 640px
+    }
+
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px
+    }
+
+    @media(max-width:1000px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 18px 20px
+      }
+
+      nav ul {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        gap: 24px;
+        white-space: nowrap;
+        padding-bottom: 4px
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 24px 20px 56px
+      }
+
+      .hero h1 {
+        font-size: 40px
+      }
+
+      .hero p {
+        font-size: 19px
+      }
+
+      .plan {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto
+      }
+
+      .z {
+        min-height: 120px
+      }
+
+      .z.a {
+        grid-row: auto;
+        min-height: 210px
+      }
+
+      .z.d {
+        grid-column: auto
+      }
+
+      .plan-cap {
+        position: static;
+        margin-bottom: 8px
+      }
+
+      section {
+        padding: 56px 20px
+      }
+
+      h2 {
+        font-size: 32px
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .two {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .cta-band {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 48px 20px
+      }
+
+      .cta-band h2 {
+        font-size: 30px
+      }
+
+      footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 48px 20px
+      }
+
+      .reqcard {
+        padding: 22px
+      }
+    }
+
+    @media(max-width:560px) {
+      .tabs {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .row2 {
+        grid-template-columns: 1fr
+      }
+
+      footer {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .cc {
+      position: fixed;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      max-width: 640px;
+      background: var(--ink);
+      color: #fff;
+      padding: 22px 24px;
+      border-radius: 6px;
+      z-index: 50;
+      display: none;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .3);
+      font-size: 16px;
+      line-height: 1.5
+    }
+
+    .cc.on {
+      display: block
+    }
+
+    .cc p {
+      margin-bottom: 16px;
+      color: #DCE5EB
+    }
+
+    .cc a {
+      text-decoration: underline
+    }
+
+    .cc .b {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .cc button {
+      padding: 12px 22px;
+      border-radius: 4px;
+      font: 600 16px 'Fira Sans', sans-serif;
+      cursor: pointer;
+      border: 2px solid var(--yel);
+      background: var(--yel);
+      color: var(--ink)
+    }
+
+    .cc button.n {
+      background: transparent;
+      color: #fff
+    }
+
+    .cc button:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 2px
+    }
+
+    .prices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .pc {
+      background: #fff;
+      border: 2px solid var(--ink);
+      padding: 28px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pc .cat {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px
+    }
+
+    .pc h3 {
+      font-size: 24px;
+      margin-bottom: 12px
+    }
+
+    .pc p {
+      color: var(--ink2);
+      margin-bottom: 6px
+    }
+
+    .pc .amt {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 26px;
+      color: var(--ink);
+      margin-bottom: 12px
+    }
+
+    .pc .inc {
+      font-size: 15px;
+      margin: 14px 0 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line)
+    }
+
+    .pc a {
+      margin-top: auto;
+      padding-top: 18px;
+      font-weight: 600;
+      align-self: flex-start
+    }
+
+    .pc a:after {
+      content: "";
+      display: block;
+      height: 3px;
+      background: var(--yel);
+      margin-top: 2px
+    }
+
+    .pc.q {
+      background: var(--yel)
+    }
+
+    .pc.q .cat,
+    .pc.q p {
+      color: var(--ink)
+    }
+
+    .pc.q a:after {
+      background: var(--ink)
+    }
+
+    .pnote {
+      margin-top: 28px;
+      color: var(--ink2);
+      font-size: 16px;
+      max-width: 760px
+    }
+
+    @media(max-width:1000px) {
+      .prices {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:560px) {
+      .prices {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav aria-label="Main">
+    <div class="logo"><i></i>{{NAME}}</div>
+    <ul>
+      <li><a href="#services">Co-working</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contracts">ICT contracts</a></li>
+      <li><a href="#why">About</a></li>
+    </ul>
+    <a class="btn y" href="#request" data-type="visit" data-from="nav">Book a visit</a>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div>
+        <h1>Work, learn and build software under one roof in {{CITY}}</h1>
+        <p>{{NAME}} is a co-working space, an ICT training centre and a software studio. Rent a desk by the day, train
+          for a career in tech, or hire our developers for your next project.</p>
+        <div class="ctas"><a class="btn" href="#request" data-type="desk" data-from="hero">Book a desk</a><a
+            class="btn o" href="#request" data-type="quote" data-from="hero">Request a quote</a></div>
+        <small>Fast fibre internet and solar power. Open {{HOURS_TEXT}}.</small>
+      </div>
+      <div style="position:relative">
+        <div class="plan-cap">Our space at {{STREET}}, {{CITY}}</div>
+        <div class="plan">
+          <div class="z a">
+            <div class="desks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><b>Co-working
+              floor</b><span>Hot desks, private desks, meeting room</span>
+          </div>
+          <div class="z b"><b>Training lab</b><span>Whiteboards, small classes</span></div>
+          <div class="z c"><b>Software studio</b><span>Where we build and ship products</span></div>
+          <div class="z d"><b>Client room</b><span>Bring your brief. We will quote it in writing.</span>
+            <div class="door"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="alt" id="services">
+      <h2>Four ways to use {{NAME}}</h2>
+      <p class="lead">Use one, or combine them. Many of our members start with a desk, join a course, or hire us when
+        their business needs software.</p>
+
+      <div class="row">
+        <div class="tag">1</div>
+        <div>
+          <h3>Co-working space in {{CITY}}</h3>
+        </div>
+        <div>
+          <p>A quiet, reliable place to work for freelancers, remote workers and small teams. Pay by the day, week or
+            month.</p>
+          <ul>
+            <li>Hot desks and private desks</li>
+            <li>Meeting room you can book by the hour</li>
+            <li>Fibre internet, backup power, printing</li>
+          </ul>
+        </div><a href="#request" data-type="desk" data-from="services-coworking">Book a desk</a>
+      </div>
+
+      <div class="row">
+        <div class="tag">2</div>
+        <div>
+          <h3>ICT training courses</h3>
+        </div>
+        <div>
+          <p>Hands-on classes taught by working developers and network engineers. You practise on real computers from
+            day one.</p>
+          <ul>
+            <li>Beginner to advanced levels</li>
+            <li>Weekday, evening and weekend classes</li>
+            <li>Certificate on completion</li>
+          </ul>
+        </div><a href="#training">Browse courses</a>
+      </div>
+
+      <div class="row">
+        <div class="tag">3</div>
+        <div>
+          <h3>Software we build and launch</h3>
+        </div>
+        <div>
+          <p>Our studio designs and runs its own software products. Try them, or ask us to adapt one for your
+            organisation.</p>
+          <ul>
+            <li>Web and mobile apps</li>
+            <li>Tools for schools, shops and service businesses</li>
+            <li>Maintained and supported by our team</li>
+          </ul>
+        </div><a href="#software">View our products</a>
+      </div>
+
+      <div class="row" id="contracts">
+        <div class="tag">4</div>
+        <div>
+          <h3>ICT contracts and support</h3>
+        </div>
+        <div>
+          <p>Hire us to build a system, set up your network or look after your IT. We quote clearly and deliver on a
+            schedule.</p>
+          <ul>
+            <li>Custom software and websites</li>
+            <li>Office networks, hardware and software supply</li>
+            <li>Monthly IT support agreements</li>
+          </ul>
+        </div><a href="#request" data-type="quote" data-from="services-contracts">Request a quote</a>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Software and IT service prices in {{CITY}}</h2>
+      <p class="lead">Starting prices in naira. Every project gets a written quote with a fixed scope and delivery date.
+      </p>
+      <div class="prices">
+        {{PRICE_CARDS}}
+      </div>
+      <p class="pnote">{{PRICING_NOTE}}</p>
+    </section>
+
+    <section class="alt" id="training">
+      <h2>ICT training courses in {{CITY}}</h2>
+      <p class="lead">Small classes, real projects. Pick the course that matches where you are today.</p>
+      <div class="tw">
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>Length</th>
+            <th>Level</th>
+            <th>Starts</th>
+            <th>Fee</th>
+          </tr>
+          {{COURSE_ROWS}}
+        </table>
+      </div>
+      <p style="margin-top:28px"><a class="btn y" href="#request" data-type="course" data-from="courses-table">Join a
+          course</a></p>
+    </section>
+
+    <section id="software">
+      <div class="two">
+        <div>
+          <h2>Software built in-house, in {{CITY}}</h2>
+          <p class="lead" style="margin-bottom:20px">Products from our studio. Each one started as a problem a customer
+            asked us to solve.</p>
+          {{PRODUCT_ITEMS}}
+        </div>
+        <div class="quote">
+          <h3>Need software or IT work done?</h3>
+          <p>Tell us what you need. We reply within one working day with questions or a price range.</p><a class="btn y"
+            href="#request" data-type="quote" data-from="software-section">Get a quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="why">
+      <h2>Why people choose {{NAME}}</h2>
+      <ul class="check" style="max-width:760px">{{PROOF_ITEMS}}</ul>
+    </section>
+
+    <section id="request">
+      <h2 style="text-align:center;margin-inline:auto">Book a desk, a visit or a course, or ask for a quote</h2>
+      <p class="lead" style="margin:0 auto 40px;text-align:center">Choose one below. We reply within one working day.
+      </p>
+
+
+      <div class="reqcard">
+        <form id="f" novalidate>
+
+          <div class="tabs" role="group" aria-label="Request type">
+            <button type="button" data-t="desk">Book a desk</button>
+            <button type="button" data-t="visit">Book a visit</button>
+            <button type="button" data-t="course">Join a course</button>
+            <button type="button" data-t="quote">Get a quote</button>
+          </div>
+
+          <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required>
+          <label for="phone">Phone or WhatsApp number</label><input id="phone" name="phone" type="tel"
+            autocomplete="tel" placeholder="Include country code" required>
+          <label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email">
+          <p class="hint">Add an email to get a confirmation and calendar invite.</p>
+
+          <fieldset data-for="desk">
+            <label for="deskPlan">Which plan?</label>
+            <select id="deskPlan" name="deskPlan">
+              <option>Day pass</option>
+              <option>Weekly</option>
+              <option>Monthly hot desk</option>
+              <option>Private desk</option>
+              <option>Meeting room</option>
+            </select>
+            <div class="row2">
+              <div><label for="deskStart">Start date</label><input id="deskStart" name="deskStart" type="date"></div>
+              <div><label for="deskDays">Number of days</label><input id="deskDays" name="deskDays" type="number"
+                  min="1" max="31" value="1"></div>
+            </div>
+          </fieldset>
+
+          <fieldset data-for="visit">
+            <div class="row2">
+              <div><label for="visitDate">Date</label><input id="visitDate" name="visitDate" type="date"></div>
+              <div><label for="visitTime">Time</label><input id="visitTime" name="visitTime" type="time" step="1800"
+                  min="{{OPEN_TIME}}" max="{{LAST_SLOT}}"></div>
+            </div>
+            <p class="hint">Visits take {{VISIT_MINUTES}} minutes. Open {{HOURS_TEXT}}.</p>
+          </fieldset>
+
+          <fieldset data-for="course">
+            <label for="course">Which course?</label>
+            <select id="course" name="course">{{COURSE_OPTIONS}}</select>
+            <label for="courseStart">Preferred start month</label><input id="courseStart" name="courseStart"
+              type="month">
+          </fieldset>
+
+          <fieldset data-for="quote">
+            <label for="brief">What do you need built or fixed?</label><textarea id="brief" name="brief"></textarea>
+            <div class="row2">
+              <div><label for="budget">Budget range</label>
+                <select id="budget" name="budget">{{BUDGET_OPTIONS}}</select>
+              </div>
+              <div><label for="deadline">Needed by</label><input id="deadline" name="deadline" type="date"></div>
+            </div>
+          </fieldset>
+
+          <div class="hp" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1"
+                autocomplete="off"></label></div>
+
+          <button class="go" type="submit">Send request</button>
+          <p class="msg" id="msg" role="alert"></p>
+          <p class="fine">We use your details only to respond to this request.</p>
+        </form>
+
+        <div class="done" id="done">
+          <h2>Request received</h2>
+          <p id="doneText">We will contact you within one working day.</p>
+          <a id="wa" href="#">Message us on WhatsApp</a>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="alt">
+      <h2>Questions people ask us</h2>
+      <div class="faq">
+        <div class="q">
+          <h3>How much does a business website cost in {{CITY}}?</h3>
+          <p>Our business websites start from {{PRICE_WEBSITE}} and online stores from {{PRICE_ECOMMERCE}}. Both include
+            SEO and setup of your Google Business Profile and Facebook Marketplace listing. The final price depends on
+            pages and features, and we confirm it in a written quote before work starts.</p>
+        </div>
+        <div class="q">
+          <h3>How much does a co-working desk cost in {{CITY}}?</h3>
+          <p>Day passes start at {{DAY_PASS_PRICE}}. Message us for weekly, monthly and private desk prices.</p>
+        </div>
+        <div class="q">
+          <h3>Do I need experience to join an ICT training course?</h3>
+          <p>No. Courses marked Beginner start from zero.</p>
+        </div>
+        <div class="q">
+          <h3>Can you build custom software for my business?</h3>
+          <p>Yes. Send us a short brief. We will confirm what we can build, the cost and the timeline in a written
+            quote.</p>
+        </div>
+        <div class="q">
+          <h3>Do you work with government or company tenders?</h3>
+          <p>Yes. Tell us about the contract and we will send our company profile and past work.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div class="cta-band">
+    <h2>Visit the hub, see the space, meet the team</h2>
+    <a class="btn" href="#request" data-type="visit" data-from="cta-band">Book a visit</a>
+  </div>
+
+  <footer>
+    <div>
+      <div class="logo"><i></i>{{NAME}}</div>
+      <p>Co-working, ICT training and software development.</p>
+    </div>
+    <div>
+      <h3>Visit</h3>
+      <p>{{STREET}}</p>
+      <p>{{CITY}}, {{COUNTRY}}</p>
+      <p>{{HOURS_SHORT}}</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:{{PHONE_TEL}}">{{PHONE}}</a></p>
+      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+      <p><a href="https://wa.me/{{WHATSAPP}}">WhatsApp us</a></p>
+    </div>
+    <div>
+      <h3>Pages</h3>
+      <p><a href="#services">Co-working</a></p>
+      <p><a href="#training">Training</a></p>
+      <p><a href="#software">Software</a></p>
+      <p><a href="#pricing">Pricing</a></p>
+      <p><a href="#contracts">ICT contracts</a></p>
+      <p><a href="/privacy.html">Privacy policy</a></p>
+      <p><a href="#" id="cc-open">Cookie settings</a></p>
+    </div>
+  </footer>
+
+  <div class="cc" id="cc" role="dialog" aria-labelledby="cc-t" aria-live="polite">
+    <p id="cc-t">We use analytics cookies to improve this site. They
+      are off unless you accept. See our <a href="/privacy.html">privacy policy</a>.</p>
+    <div class="b"><button type="button" id="cc-yes">Accept analytics</button><button type="button" class="n"
+        id="cc-no">Decline</button></div>
+  </div>
+  <noscript>
+    <p style="padding:20px">Our request form needs JavaScript. Message us on WhatsApp or email {{EMAIL}}.</p>
+  </noscript>
+  <script>
+    // Filled in from site.config.json at build time. Edit the config, not this file.
+    const ENDPOINT = '{{ENDPOINT}}';
+    const WHATSAPP = '{{WHATSAPP}}';
+
+    const f = document.getElementById('f'), msg = document.getElementById('msg');
+    const tabs = [...document.querySelectorAll('.tabs button')];
+    let type = 'desk';
+
+    function choose(t) {
+      type = t;
+      tabs.forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
+      document.querySelectorAll('fieldset').forEach(s => s.classList.toggle('on', s.dataset.for === t));
+      msg.textContent = '';
+    }
+    tabs.forEach(b => b.addEventListener('click', () => choose(b.dataset.t)));
+
+    // Deep links: /?type=quote&from=email opens the form on that tab and records the source
+    const q = new URLSearchParams(location.search);
+    choose(['desk', 'visit', 'course', 'quote'].includes(q.get('type')) ? q.get('type') : 'desk');
+    let source = (q.get('from') || 'direct').slice(0, 120);
+
+    f.addEventListener('submit', async e => {
+      e.preventDefault();
+      msg.className = 'msg'; msg.textContent = '';
+      const d = Object.fromEntries(new FormData(f));
+      const utm = ['utm_source', 'utm_medium', 'utm_campaign'].map(k => q.get(k)).filter(Boolean).join('/');
+      let ref = ''; try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (_) { }
+      d.type = type; d.source = source + ' > ' + type + ' | via ' + (utm || ref || 'direct');
+
+      const need = [['name', 'your name'], ['phone', 'your phone number']];
+      if (type === 'visit') need.push(['visitDate', 'a date'], ['visitTime', 'a time']);
+      if (type === 'desk') need.push(['deskStart', 'a start date']);
+      if (type === 'quote') need.push(['brief', 'a short description']);
+      for (const [k, label] of need) if (!String(d[k] || '').trim()) { msg.className = 'msg err'; msg.textContent = 'Please enter ' + label + '.'; return; }
+
+      const btn = f.querySelector('.go'); btn.disabled = true; btn.textContent = 'Sending...';
+      try {
+        const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(d) });
+        const j = await r.json();
+        if (!j.ok) throw new Error(j.error || 'Failed');
+        f.style.display = 'none';
+        document.getElementById('done').style.display = 'block';
+        document.getElementById('doneText').textContent = 'Your reference is ' + j.id + '. We will contact you on ' + d.phone + ' within one working day.';
+        track('generate_lead', { lead_type: type, lead_source: source });
+        document.getElementById('wa').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hi, my reference is ' + j.id);
+      } catch (err) {
+        msg.className = 'msg err';
+        msg.textContent = (err.message && err.message !== 'Failed' && err.message !== 'Failed to fetch') ? err.message : 'We could not send that. Please try again or message us on WhatsApp.';
+        btn.disabled = false; btn.textContent = 'Send request';
+      }
+    });
+
+    // every button with data-type opens the right tab and records where the click came from
+    document.addEventListener('click', e => {
+      const a = e.target.closest('[data-type]'); if (!a) return;
+      const done = document.getElementById('done');
+      if (done.style.display === 'block') {
+        done.style.display = 'none'; f.style.display = ''; f.reset();
+        const g = f.querySelector('.go'); g.disabled = false; g.textContent = 'Send request';
+      }
+      track('cta_click', { cta_type: a.dataset.type, cta_location: a.dataset.from || 'link' }); choose(a.dataset.type); source = (a.dataset.from || a.textContent).trim().slice(0, 120);
+    });
+
+    // ===== Analytics (GA4), loads ONLY after the visitor accepts =====
+    const GA_ID = '{{GA_ID}}';
+    const CONSENT_KEY = 'kh_consent';
+    function track(name, params) { if (window.gtag && !window['ga-disable-' + GA_ID]) gtag('event', name, params || {}); }
+    function loadGA() {
+      window['ga-disable-' + GA_ID] = false;
+      if (window.__ga || !GA_ID) return;
+      window.__ga = 1;
+      const t = document.createElement('script'); t.async = true;
+      t.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID; document.head.appendChild(t);
+      window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', GA_ID);
+    }
+    function getConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (_) { return null; } }
+    function setConsent(v) {
+      try { localStorage.setItem(CONSENT_KEY, v); } catch (_) { }
+      document.getElementById('cc').classList.remove('on');
+      if (v === 'granted') loadGA(); else window['ga-disable-' + GA_ID] = true;
+    }
+    document.getElementById('cc-yes').onclick = () => setConsent('granted');
+    document.getElementById('cc-no').onclick = () => setConsent('denied');
+    document.getElementById('cc-open').onclick = e => { e.preventDefault(); document.getElementById('cc').classList.add('on'); };
+    if (getConsent() === 'granted') loadGA();
+    else if (getConsent() === 'denied') window['ga-disable-' + GA_ID] = true;
+    else document.getElementById('cc').classList.add('on');
+    document.addEventListener('click', e => { if (e.target.closest('#wa')) track('whatsapp_click'); });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+{
+  "name": "Stello ICT Hub",
+  "city": "Kano",
+  "country": "Nigeria",
+  "countryCode": "NG",
+  "street": "No. 3 Ijebu Road By Court Road",
+  "domain": "https://stellohub.fyi",
+  "phone": "+234 904 729 3492",
+  "whatsapp": "+2349047293492",
+  "email": "technologies.stello@gmail.com",
+  "ownerEmail": "technologies.stello@gmail.com",
+  "timezone": "Africa/Lagos",
+  "openHour": 9,
+  "closeHour": 21,
+  "closedDays": [
+    0
+  ],
+  "visitMinutes": 30,
+  "hoursText": "Monday to Saturday, 9am to 9pm",
+  "hoursShort": "Mon to Sat, 9am to 9pm",
+  "endpoint": "https://script.google.com/macros/s/AKfycbz2YysZ6kD0xruCSCs9J8Z84CGjYTWT1ImuCm0GphaVg4TcSVj535kVazMTLeW0bzCN/exec",
+  "gaId": "",
+  "dayPassPrice": "₦3,000",
+  "retention": "2 years",
+  "budgetRanges": [
+    "Not sure yet",
+    "Under ₦350,000",
+    "₦350,000 to ₦2,000,000",
+    "Above ₦2,000,000"
+  ],
+  "courses": [
+    {
+      "name": "Computer skills and office software",
+      "length": "4 weeks",
+      "level": "Beginner",
+      "starts": "Every month",
+      "fee": "₦30,000"
+    },
+    {
+      "name": "Web development with HTML, CSS and JavaScript",
+      "length": "12 weeks",
+      "level": "Beginner",
+      "starts": "January 2027",
+      "fee": "₦300,000"
+    },
+    {
+      "name": "Full stack web development with React and Node.js",
+      "length": "12 weeks",
+      "level": "Intermediate",
+      "starts": "January 2027",
+      "fee": "₦500,000"
+    },
+    {
+      "name": "Cloud and Networking basics",
+      "length": "8 weeks",
+      "level": "Intermediate",
+      "starts": "January 2027",
+      "fee": "₦400,000"
+    },
+    {
+      "name": "Mobile app development",
+      "length": "12 weeks",
+      "level": "Advanced",
+      "starts": "January 2027",
+      "fee": "₦600,000"
+    }
+  ],
+  "products": [
+    {
+      "name": "Beanie",
+      "status": "Live",
+      "blurb": "Processed over ₦100M in digital payments for online businesses."
+    },
+    {
+      "name": "Nani",
+      "status": "Live",
+      "blurb": "Notification and messaging framework for cryptocurrency businesses."
+    },
+    {
+      "name": "Bookkeepr",
+      "status": "Live",
+      "blurb": "Bookkeeping and accounting software at Point of Sales for businesses."
+    }
+  ],
+  "proof": [
+    "Fibre internet with a solar inverter, so work does not stop when power does",
+    "Trainers who build software for paying clients every week",
+    "Fixed written quotes, with a delivery date on every contract",
+    "2500+ students trained and 50+ projects delivered since 2018"
+  ],
+  "pricing": {
+    "note": "Prices are starting points in naira and depend on scope. We confirm the final price in a written quote before work begins.",
+    "items": [
+      {
+        "id": "website",
+        "category": "Website",
+        "name": "Business website",
+        "price": 350000,
+        "description": "A fast, mobile-friendly site that shows up when customers search for you.",
+        "includes": "SEO, Google Business Profile and Facebook Marketplace setup included",
+        "type": "quote"
+      },
+      {
+        "id": "ecommerce",
+        "category": "Online store",
+        "name": "E-commerce store",
+        "price": 1000000,
+        "description": "Sell online with product pages, a cart and checkout.",
+        "includes": "SEO, Google Business Profile and Facebook Marketplace setup included",
+        "type": "quote"
+      },
+      {
+        "id": "mobile",
+        "category": "Mobile app",
+        "name": "Mobile app",
+        "price": 2000000,
+        "description": "An Android and iOS app for your customers or your team.",
+        "type": "quote"
+      },
+      {
+        "id": "software",
+        "category": "Custom software",
+        "name": "Web app or custom software",
+        "price": 2500000,
+        "description": "Dashboards, portals, and school or shop systems built around how you work.",
+        "type": "quote"
+      },
+      {
+        "id": "support",
+        "category": "Support",
+        "name": "IT support and maintenance",
+        "price": 100000,
+        "period": "month",
+        "description": "Monthly care for your site or systems: updates, backups and fixes.",
+        "type": "quote"
+      },
+      {
+        "id": "other",
+        "category": "Something else",
+        "name": "Need something else?",
+        "price": null,
+        "description": "MVP, AI, Fintech, or a project that does not fit above. Tell us what you need.",
+        "type": "quote"
+      }
+    ]
+  }
+}
