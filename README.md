@@ -1,4 +1,4 @@
-# Kernel Hub website
+# Stello Hub website
 
 A one-page website for a co-working space, ICT training centre and software studio, with a request form that writes to Google Sheets and Google Calendar. All free tools. No server to run. For how it fits together, see [Design and architecture](#design-and-architecture) at the end.
 
